@@ -16,8 +16,19 @@ module.exports = {
   },
 
   plugins: [
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-styled-components",
-    "gatsby-plugin-robots-txt",
+    "gatsby-plugin-sitemap",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://jscodelover.netlify.com",
+        sitemap: "https://jscodelover.netlify.com/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -31,5 +42,12 @@ module.exports = {
       },
     },
     "gatsby-plugin-offline",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: `${__dirname}/src/images/`,
+      },
+    },
   ],
-}
+};
