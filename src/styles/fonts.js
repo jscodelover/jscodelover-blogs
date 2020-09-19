@@ -1,7 +1,7 @@
 import { css } from "styled-components";
 
-import SFMonoRegularWoff from "@fonts/SFMono/SFMono-Regular.woff";
-import SFMonoRegularWoff2 from "@fonts/SFMono/SFMono-Regular.woff2";
+import SFMonoRegularWoff from "@fonts/SFMono-Regular.woff";
+import SFMonoRegularWoff2 from "@fonts/SFMono-Regular.woff2";
 
 const sfMonoNormalWeights = {
   400: [SFMonoRegularWoff, SFMonoRegularWoff2],
