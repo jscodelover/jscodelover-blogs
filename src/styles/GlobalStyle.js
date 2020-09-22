@@ -54,6 +54,9 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     font-family: var(--font-inter);
     font-size: var(--fz-md);
+    background-color: ${({ theme }) => theme.body};
+    color: ${({ theme }) => theme.text2};
+    transition: var(--transition);
   }  
 
   .big-heading {
