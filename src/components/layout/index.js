@@ -1,21 +1,14 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import useDarkMode from "@hooks/ToggleTheme";
+
+// https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
+if (typeof window !== "undefined") {
+  require("smooth-scroll")('a[href*="#"]');
+}
 
 function Layout(props) {
-  const [theme, toggleTheme] = useDarkMode();
-  console.log(props);
-  function handleClick() {
-    toggleTheme();
-    props.handleTheme(theme);
-  }
   const { children } = props;
-  return (
-    <div>
-      <button onClick={handleClick}>{theme}</button>
-      {children}
-    </div>
-  );
+  return <div>{children}</div>;
 }
 
 Layout.propTypes = {
