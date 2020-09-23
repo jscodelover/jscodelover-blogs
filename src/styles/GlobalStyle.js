@@ -59,6 +59,27 @@ const GlobalStyle = createGlobalStyle`
     transition: var(--transition);
   }  
 
+  button{
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  a{
+    color: inherit;
+    text-decoration: none;
+    &:active, &:visited{
+      color: inherit;
+    }
+  }
+
+  :focus{
+    outline-color: transparent;
+    outline-style: initial;
+  }
+
+
   .big-heading {
     margin: 0;
     font-size: clamp(40px, 8vw, 80px);

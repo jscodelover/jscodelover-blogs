@@ -24,7 +24,7 @@ export const darkTheme = {
   text2: "#9CA8BD",
   highlight: "#FF7BB8",
   cardBg: "#161C2B",
-  headerShow: "rgba(2, 2, 4, 0.64)",
+  headerShadow: "rgba(2, 2, 4, 0.64)",
   cardShadow: "rgba(2, 2, 4, 0.64)",
   photoGradient: "linear-gradient(#1D2436, #2D313C)",
 };
@@ -37,7 +37,7 @@ export const lightTheme = {
   text2: "#4A5568",
   highlight: "#B9306F",
   cardBg: "#FFFFFF",
-  headerShow: "rgba(0, 0, 0, 0.27)",
+  headerShadow: "rgba(0, 0, 0, 0.27)",
   cardShadow: "rgba(213, 213, 213, 0.59)",
   photoGradient: "linear-gradient(#121723, #4A5568)",
 };

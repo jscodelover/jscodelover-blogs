@@ -9,7 +9,9 @@ function SetTheme({ element }) {
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <GlobalStyle />
-      <Layout handleTheme={toggleTheme}>{element}</Layout>
+      <Layout handleTheme={toggleTheme} theme={theme}>
+        {element}
+      </Layout>
     </ThemeProvider>
   );
 }
