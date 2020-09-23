@@ -12,7 +12,7 @@ const StyleMenu = styled.div`
       }
       .link {
         font-weight: 500;
-        font-size: var(--fz-md);
+        font-size: clamp(var(--fz-sm), 4vw, var(--fz-md));
         color: ${({ theme }) => theme.text1};
       }
       .active-link {

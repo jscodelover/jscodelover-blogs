@@ -30,6 +30,7 @@ const GlobalStyle = createGlobalStyle`
     --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
 
     --border-radius: 4px;
+    --nav-height: 85px;
 
     --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   }    
@@ -61,6 +62,7 @@ const GlobalStyle = createGlobalStyle`
 
   button{
     padding: 0;
+    color: inherit;
     background-color: transparent;
     border: none;
     cursor: pointer;
