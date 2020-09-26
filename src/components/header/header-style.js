@@ -36,4 +36,40 @@ const StyleNav = styled.div`
   }
 `;
 
-export { StyleNav };
+const StyleMenu = styled.div`
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    li {
+      &:not(:last-child) {
+        margin-right: 35px;
+      }
+      .link {
+        font-weight: 500;
+        font-size: clamp(var(--fz-sm), 4vw, var(--fz-md));
+        color: ${({ theme }) => theme.text1};
+      }
+      .active-link {
+        color: ${({ theme }) => theme.highlight};
+      }
+      &:last-child {
+        height: 22px;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const StyleHamburgerButton = styled.button`
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
+export { StyleNav, StyleMenu, StyleHamburgerButton };

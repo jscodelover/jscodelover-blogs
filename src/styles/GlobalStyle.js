@@ -76,11 +76,26 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  section {
+    margin: 0px auto;
+    padding: 150px 0px;
+    max-width: 1000px;
+  }
+
   :focus{
     outline-color: transparent;
     outline-style: initial;
   }
 
+.blur{
+  overflow: hidden;
+  #content > *{
+    filter: blur(5px) brightness(0.7);
+    transition: var(--transition);
+    pointer-events: none;
+    user-select: none;
+  }
+}
 
   .big-heading {
     margin: 0;

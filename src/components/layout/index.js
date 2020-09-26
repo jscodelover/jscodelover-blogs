@@ -33,7 +33,9 @@ function Layout(props) {
         scrollDir={scrollDir}
         scrolledToTop={scrolledToTop}
       />
-      <Wrapper>{children}</Wrapper>
+      <Wrapper>
+        <main>{children}</main>
+      </Wrapper>
     </>
   );
 }

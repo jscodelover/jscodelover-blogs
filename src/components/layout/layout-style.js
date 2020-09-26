@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-const Wrapper = styled.div`
+const Wrapper = styled.div.attrs(props => ({
+  id: `content`,
+}))`
   margin: 0px auto;
   width: 100%;
   max-width: 1600px;
