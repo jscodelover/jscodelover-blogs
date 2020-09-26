@@ -1,10 +1,14 @@
 import styled, { css } from "styled-components";
 
 const StyleNav = styled.div`
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+  padding: 0 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 80px;
   height: var(--nav-height);
   transition: var(--transition);
 

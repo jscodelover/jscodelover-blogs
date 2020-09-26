@@ -6,6 +6,7 @@ const StyleMenu = styled.div`
     padding: 0;
     margin: 0;
     display: flex;
+    align-items: center;
     li {
       &:not(:last-child) {
         margin-right: 35px;
@@ -18,11 +19,8 @@ const StyleMenu = styled.div`
       .active-link {
         color: ${({ theme }) => theme.highlight};
       }
-      .themeBtn {
-        svg {
-          width: 22px;
-          height: 22px;
-        }
+      &:last-child {
+        height: 22px;
       }
     }
   }
