@@ -89,10 +89,9 @@ function Header(props) {
                 </button>
                 <ul>
                   {menu.map(item => (
-                    <li key={item.to}>
+                    <li key={item.to} onClick={closeSidebar}>
                       <Link
                         to={item.to}
-                        onClick={closeSidebar}
                         className="link"
                         activeClassName="active-link"
                         partiallyActive={!item.exact}
