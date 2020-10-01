@@ -31,6 +31,7 @@ const GlobalStyle = createGlobalStyle`
 
     --border-radius: 4px;
     --nav-height: 85px;
+    --sidebar-width: 350px;
 
     --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   }    
@@ -76,6 +77,12 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
   section {
     margin: 0px auto;
     padding: 150px 0px;
@@ -105,6 +112,11 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-size: clamp(40px, 8vw, 60px);
   }
+
+  line,circle{
+    transition: var(--transition)
+  }
+
 `;
 
 export default GlobalStyle;

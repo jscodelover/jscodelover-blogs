@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Wrapper = styled.div.attrs(props => ({
+const StyleContent = styled.div.attrs(props => ({
   id: `content`,
 }))`
   margin: 0px auto;
@@ -19,4 +19,4 @@ const Wrapper = styled.div.attrs(props => ({
   }
 `;
 
-export { Wrapper };
+export { StyleContent };

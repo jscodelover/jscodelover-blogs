@@ -1,12 +1,25 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "gatsby";
-import { IconLogo, IconTheme, IconHamBurger } from "@components/icons";
+import {
+  IconLogo,
+  IconTheme,
+  IconHamBurger,
+  IconCross,
+} from "@components/icons";
+import useOnClickOutside from "@hooks/useOnClickOutside";
 import { menu } from "@utils/menu";
-import { StyleNav, StyleMenu, StyleHamburgerButton } from "./header-style.js";
+import {
+  StyleNav,
+  StyleLinks,
+  StyleMenu,
+  StyleHamburgerButton,
+  StyleSidebar,
+} from "./header-style.js";
 
 function Header(props) {
   const [showSideBar, handleShowSidebar] = React.useState(false);
+  const wrapperRef = React.useRef();
 
   React.useEffect(() => {
     window.addEventListener("resize", onResize);
@@ -15,11 +28,21 @@ function Header(props) {
     };
   }, []);
 
+  // Call hook passing in the wrapperRef and a function to call on outside click
+  useOnClickOutside(wrapperRef, () => handleShowSidebar(false));
+
   function onResize(e) {
     if (e.currentTarget.innerWidth > 768) {
-      console.log(e.currentTarget.innerWidth > 768);
       handleShowSidebar(false);
     }
+  }
+
+  function openSidebar() {
+    handleShowSidebar(true);
+  }
+
+  function closeSidebar() {
+    handleShowSidebar(false);
   }
 
   const { theme, handleTheme, scrollDir, scrolledToTop } = props;
@@ -30,7 +53,7 @@ function Header(props) {
       </Helmet>
       <StyleNav scrollDirection={scrollDir} scrolledToTop={scrolledToTop}>
         <IconLogo theme={theme} />
-        <StyleMenu>
+        <StyleLinks>
           <ul>
             {menu.map(item => (
               <li key={item.to}>
@@ -45,15 +68,44 @@ function Header(props) {
               </li>
             ))}
             <li>
-              <button className="themeBtn" onClick={handleTheme}>
-                <IconTheme theme={theme} />
+              <button onClick={handleTheme}>
+                <IconTheme theme={theme} device="d" />
               </button>
             </li>
           </ul>
-        </StyleMenu>
-        <StyleHamburgerButton>
-          <IconHamBurger theme={theme} />
-        </StyleHamburgerButton>
+        </StyleLinks>
+        <StyleSidebar>
+          <div ref={wrapperRef}>
+            <button onClick={handleTheme}>
+              <IconTheme theme={theme} device="m" />
+            </button>
+            <StyleHamburgerButton onClick={openSidebar}>
+              <IconHamBurger theme={theme} />
+            </StyleHamburgerButton>
+            <StyleMenu showSideBar={showSideBar}>
+              <nav>
+                <button onClick={closeSidebar}>
+                  <IconCross theme={theme} />
+                </button>
+                <ul>
+                  {menu.map(item => (
+                    <li key={item.to}>
+                      <Link
+                        to={item.to}
+                        onClick={closeSidebar}
+                        className="link"
+                        activeClassName="active-link"
+                        partiallyActive={!item.exact}
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </StyleMenu>
+          </div>
+        </StyleSidebar>
       </StyleNav>
     </>
   );
