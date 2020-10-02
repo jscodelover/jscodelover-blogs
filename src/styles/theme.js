@@ -1,4 +1,8 @@
 import mixins from "./mixins";
+import aboutImage_dark from "@images/aboutImage_dark.png";
+import aboutImage_dark2x from "@images/aboutImage_dark@2x.png";
+import aboutImage_light from "@images/aboutImage_light.png";
+import aboutImage_light2x from "@images/aboutImage_light@2x.png";
 
 const theme = {
   bp: {
@@ -28,6 +32,8 @@ export const darkTheme = {
   headerShadow: "rgba(2, 2, 4, 0.64)",
   cardShadow: "rgba(2, 2, 4, 0.64)",
   photoGradient: "linear-gradient(#1D2436, #2D313C)",
+  aboutImage: aboutImage_dark,
+  aboutImage2x: aboutImage_dark2x,
 };
 
 export const lightTheme = {
@@ -42,6 +48,8 @@ export const lightTheme = {
   headerShadow: "rgba(0, 0, 0, 0.27)",
   cardShadow: "rgba(213, 213, 213, 0.59)",
   photoGradient: "linear-gradient(#121723, #4A5568)",
+  aboutImage: aboutImage_light,
+  aboutImage2x: aboutImage_light2x,
 };
 
 export default theme;
