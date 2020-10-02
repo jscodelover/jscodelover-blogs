@@ -18,6 +18,7 @@ const theme = {
 
 export const darkTheme = {
   body: "#121723",
+  bodyBlur: "rgba(18, 23, 35, 0.4)",
   header: "#FFFFFF",
   subHeader: "#FFFFFF",
   text1: "#9CA8BD",
@@ -31,6 +32,7 @@ export const darkTheme = {
 
 export const lightTheme = {
   body: "#FFFFFF",
+  bodyBlur: "rgba(255, 255, 255, 0.4)",
   header: "#121723",
   subHeader: "#2D3748",
   text1: "#2D3748",

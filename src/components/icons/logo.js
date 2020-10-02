@@ -19,8 +19,8 @@ const IconLogo = ({ theme }) => {
             y2="1"
             gradientUnits="objectBoundingBox"
           >
-            <stop offset="0" stop-color="#da2c83" />
-            <stop offset="1" stop-color="#5a0d30" />
+            <stop offset="0" stopColor="#da2c83" />
+            <stop offset="1" stopColor="#5a0d30" />
           </linearGradient>
           <linearGradient
             id="linear-gradient-2"
@@ -30,8 +30,8 @@ const IconLogo = ({ theme }) => {
             y2="0.155"
             gradientUnits="objectBoundingBox"
           >
-            <stop offset="0" stop-color="#480925" />
-            <stop offset="1" stop-color="#f83396" />
+            <stop offset="0" stopColor="#480925" />
+            <stop offset="1" stopColor="#f83396" />
           </linearGradient>
           <linearGradient
             id="linear-gradient-3"
@@ -41,8 +41,8 @@ const IconLogo = ({ theme }) => {
             y2="0.155"
             gradientUnits="objectBoundingBox"
           >
-            <stop offset="0" stop-color="#97134d" />
-            <stop offset="1" stop-color="#5d0b30" />
+            <stop offset="0" stopColor="#97134d" />
+            <stop offset="1" stopColor="#5d0b30" />
           </linearGradient>
         </defs>
         <path
@@ -292,8 +292,8 @@ const IconLogo = ({ theme }) => {
               transform="translate(3.996 1.213)"
               fill="none"
               stroke="#d0cde1"
-              stroke-miterlimit="10"
-              stroke-width="2"
+              strokeMiterlimit="10"
+              strokeWidth="2"
             />
             <circle
               id="Ellipse_48"
@@ -339,8 +339,8 @@ const IconLogo = ({ theme }) => {
           y2="1"
           gradientUnits="objectBoundingBox"
         >
-          <stop offset="0" stop-color="#da2c83" />
-          <stop offset="1" stop-color="#ff7bb8" />
+          <stop offset="0" stopColor="#da2c83" />
+          <stop offset="1" stopColor="#ff7bb8" />
         </linearGradient>
         <linearGradient
           id="linear-gradient-2"
@@ -350,8 +350,8 @@ const IconLogo = ({ theme }) => {
           y2="0.155"
           gradientUnits="objectBoundingBox"
         >
-          <stop offset="0" stop-color="#ff3995" />
-          <stop offset="1" stop-color="#fdd6ea" />
+          <stop offset="0" stopColor="#ff3995" />
+          <stop offset="1" stopColor="#fdd6ea" />
         </linearGradient>
         <linearGradient
           id="linear-gradient-3"
@@ -361,8 +361,8 @@ const IconLogo = ({ theme }) => {
           y2="0.155"
           gradientUnits="objectBoundingBox"
         >
-          <stop offset="0" stop-color="#97134d" />
-          <stop offset="1" stop-color="#e5428d" />
+          <stop offset="0" stopColor="#97134d" />
+          <stop offset="1" stopColor="#e5428d" />
         </linearGradient>
       </defs>
       <path
@@ -612,8 +612,8 @@ const IconLogo = ({ theme }) => {
             transform="translate(3.996 1.213)"
             fill="none"
             stroke="#d0cde1"
-            stroke-miterlimit="10"
-            stroke-width="2"
+            strokeMiterlimit="10"
+            strokeWidth="2"
           />
           <circle
             id="Ellipse_48"

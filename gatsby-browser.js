@@ -1,7 +1,7 @@
 import * as React from "react";
 import { ThemeProvider } from "styled-components";
 import { Layout } from "@components";
-import useDarkMode from "@hooks/ToggleTheme";
+import useDarkMode from "@hooks/useDarkMode";
 import { GlobalStyle, darkTheme, lightTheme } from "@styles";
 
 function SetTheme({ element }) {

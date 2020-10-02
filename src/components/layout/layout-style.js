@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-const Wrapper = styled.div`
+const StyleContent = styled.div.attrs(props => ({
+  id: `content`,
+}))`
   margin: 0px auto;
   width: 100%;
   max-width: 1600px;
@@ -17,4 +19,4 @@ const Wrapper = styled.div`
   }
 `;
 
-export { Wrapper };
+export { StyleContent };
