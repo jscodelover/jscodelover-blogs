@@ -16,7 +16,6 @@ const theme = {
     desktopM: `max-width: 1200px`,
     desktopL: `max-width: 1400px`,
   },
-
   mixins,
 };
 

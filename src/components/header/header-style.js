@@ -5,7 +5,7 @@ const StyleNav = styled.div`
   top: 0;
   z-index: 9;
   width: 100%;
-  padding: 0 80px;
+  padding: 0 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;

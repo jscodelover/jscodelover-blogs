@@ -84,9 +84,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   section, article {
-    margin: 0px auto;
-    padding: 150px 0px;
-    max-width: 1000px;
+    padding: 150px 0 0;
   }
 
   :focus{
