@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
     --fz-md: 16px;
     --fz-lg: 18px;
     --fz-xl: 20px;
-    --fz-xxl: 22px;
+    --fz-xxl: 24px;
     --fz-heading: 32px;
 
     --font-inter: Inter, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
@@ -83,10 +83,8 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 
-  section {
-    margin: 0px auto;
-    padding: 150px 0px;
-    max-width: 1000px;
+  section, article {
+    padding: 150px 0 0;
   }
 
   :focus{
