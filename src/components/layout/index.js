@@ -1,6 +1,6 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import { Header } from "@components";
+import { Header, Footer } from "@components";
 import useScrollDirection from "@hooks/useScrollDirection";
 import { StyleContent } from "./layout-style.js";
 
@@ -36,6 +36,7 @@ function Layout(props) {
       <StyleContent>
         <main>{children}</main>
       </StyleContent>
+      <Footer />
     </>
   );
 }

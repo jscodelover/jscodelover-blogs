@@ -1,12 +1,13 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { HeroSection } from "@components";
+import { HeroSection, DisplayType } from "@components";
 
 export default function Home() {
   return (
     <>
       <Helmet title="home" />
       <HeroSection />
+      <DisplayType />
       <section>
         Dark mode is the first feature I added in my website. I really didn’t
         know how to do it at first, especially I’m using Tailwind for my

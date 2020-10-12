@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const StyleWrapper = styled.section`
   margin: 50vh auto 0;
-  transform: translateY(-50%);
+  transform: translateY(-70%);
   max-width: 700px;
   text-align: center;
 `;
