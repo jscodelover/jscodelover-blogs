@@ -35,8 +35,8 @@ function Layout(props) {
       />
       <StyleContent>
         <main>{children}</main>
+        <Footer />
       </StyleContent>
-      <Footer />
     </>
   );
 }

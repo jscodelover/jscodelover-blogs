@@ -27,9 +27,13 @@ function HeroSection() {
         <h2 className="big-heading">Manisha Basra.</h2>
         <h3>I stand on a sweet spot where design and code intersects.</h3>
         <p>
-          I’m a passionate self-taught FrontEnd web developer from India
-          specializing in building (and occasionally designing) exceptional
-          websites, applications, and everything in between.
+          I’m a Frontend Engineer from India specializing in building and
+          occasionally designing exceptional websites. I{" "}
+          <span role="img" aria-label="heart">
+            ❤️
+          </span>{" "}
+          all things about web. I am super passionate about learning and
+          building stuff.
         </p>
       </StyledHeroContent>
       <StyledHeroImage>
