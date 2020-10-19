@@ -7,6 +7,7 @@ import {
   IconHamBurger,
   IconCross,
 } from "@components/icons";
+import { ColorThemeContext } from "@context";
 import useOnClickOutside from "@hooks/useOnClickOutside";
 import { menu } from "@utils/menu";
 import {
@@ -20,6 +21,7 @@ import {
 function Header(props) {
   const [showSideBar, handleShowSidebar] = React.useState(false);
   const wrapperRef = React.useRef();
+  const [theme, toggleTheme] = React.useContext(ColorThemeContext);
 
   React.useEffect(() => {
     window.addEventListener("resize", onResize);
@@ -45,7 +47,12 @@ function Header(props) {
     handleShowSidebar(false);
   }
 
-  const { theme, handleTheme, scrollDir, scrolledToTop } = props;
+  function changeTheme() {
+    props.handleTheme();
+    toggleTheme();
+  }
+
+  const { scrollDir, scrolledToTop } = props;
   return (
     <>
       <Helmet>
@@ -68,7 +75,7 @@ function Header(props) {
               </li>
             ))}
             <li>
-              <button onClick={handleTheme}>
+              <button onClick={changeTheme}>
                 <IconTheme theme={theme} device="d" />
               </button>
             </li>
@@ -76,7 +83,7 @@ function Header(props) {
         </StyleLinks>
         <StyleSidebar>
           <div ref={wrapperRef}>
-            <button onClick={handleTheme}>
+            <button onClick={changeTheme}>
               <IconTheme theme={theme} device="m" />
             </button>
             <StyleHamburgerButton onClick={openSidebar}>

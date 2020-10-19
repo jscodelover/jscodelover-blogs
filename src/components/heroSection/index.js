@@ -23,7 +23,7 @@ function HeroSection() {
   return (
     <StyledHeroSection>
       <StyledHeroContent>
-        <h1>Hey!!, I'm</h1>
+        <h1>Hello World!, I'm</h1>
         <h2 className="big-heading">Manisha Basra.</h2>
         <h3>I stand on a sweet spot where design and code intersects.</h3>
         <p>

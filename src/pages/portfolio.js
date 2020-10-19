@@ -2,9 +2,9 @@ import * as React from "react";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
 
-const StyleWrapper = styled.section`
+const StyleWrapper = styled.div`
   margin: 50vh auto 0;
-  transform: translateY(-70%);
+  transform: translateY(-50%);
   max-width: 700px;
   text-align: center;
 `;
