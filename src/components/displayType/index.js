@@ -2,11 +2,13 @@ import * as React from "react";
 import { StyleView } from "./display-style";
 import { IconGrid, IconList1, IconList2 } from "@components/icons";
 
-function DisplayType() {
+function DisplayType(props) {
   const [viewType, handleViewType] = React.useState("1");
 
   function handleClick(e) {
-    handleViewType(e.target.dataset.type);
+    const { type } = e.target.dataset;
+    props.handleType(type);
+    handleViewType(type);
   }
 
   return (

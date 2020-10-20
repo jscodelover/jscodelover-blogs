@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet";
-import { HeroSection, DisplayType } from "@components";
+import { HeroSection, DisplayType, BlogType } from "@components";
 
 export default function Home() {
+  const [viewType, handleViewType] = useState("1");
+
   return (
     <>
       <Helmet title="home" />
       <HeroSection />
-      <DisplayType />
+      <DisplayType handleType={type => handleViewType(type)} />
+      <BlogType type={viewType} />
       <section>
         Dark mode is the first feature I added in my website. I really didn’t
         know how to do it at first, especially I’m using Tailwind for my
