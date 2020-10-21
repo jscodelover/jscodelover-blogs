@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./card";
 // import Line from "line";
-// import List from "List";
+import List from "./list";
 
 function BlogType(props) {
   const { type } = props;
@@ -9,7 +9,7 @@ function BlogType(props) {
     case "1":
       return <Card {...props} />;
     case "2":
-      return <Card {...props} />;
+      return <List {...props} />;
     case "3":
       return <Card {...props} />;
     default:
