@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "./card";
-// import Line from "line";
+import Line from "./line";
 import List from "./list";
 
 function BlogType(props) {
@@ -11,7 +11,7 @@ function BlogType(props) {
     case "2":
       return <List {...props} />;
     case "3":
-      return <Card {...props} />;
+      return <Line {...props} />;
     default:
       return <Card {...props} />;
   }
