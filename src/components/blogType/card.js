@@ -3,9 +3,19 @@ import styled from "styled-components";
 import { DateRead } from "@components";
 import sampleImg from "@images/sample.jpeg";
 
-const StyleCard = styled.div`
+const StyleWrapper = styled.div`
+  display: grid;
+  grid-gap: 80px 45px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  justify-items: center;
+  @media (max-width: 399px) {
+    grid-template-columns: 100%;
+  }
+`;
+
+const Card = styled.div`
   position: relative;
-  width: 350px;
+  max-width: 350px;
   min-height: 381px;
   background-color: ${({ theme }) => theme.cardBg};
   border-radius: 9px;
@@ -21,7 +31,8 @@ const StyleCard = styled.div`
 `;
 
 const StyleImage = styled.img`
-  width: inherit;
+  width: 100%;
+  max-width: inherit;
   height: 240px;
   border-radius: 9px 9px 0 0;
 `;
@@ -49,22 +60,102 @@ const StyleContent = styled.div`
   }
 `;
 
-function Card(props) {
+function CardComponent(props) {
   return (
-    <StyleCard>
-      <StyleImage src={sampleImg} alt={sampleImg} />
-      <StyleContent>
-        <h3>Things About Git and Github You Need to Know as Developer</h3>
-        <DateRead date={"Dec 7th, 2018"} time={18} />
-        <p>
-          In this article I’m going to present to you a way of handling your API
-          errors once and for all in a In this article I’m going to present to
-          you a way of handling your API errors once and for all in
-        </p>
-      </StyleContent>
-      <a href="#" />
-    </StyleCard>
+    <StyleWrapper>
+      <Card>
+        <StyleImage src={sampleImg} alt={sampleImg} />
+        <StyleContent>
+          <h3>Things About Git and Github You Need to Know as Developer</h3>
+          <DateRead date={"Dec 7th, 2018"} time={18} />
+          <p>
+            In this article I’m going to present to you a way of handling your
+            API errors once and for all in a In this article I’m going to
+            present to you a way of handling your API errors once and for all in
+          </p>
+        </StyleContent>
+        <a href="#" />
+      </Card>
+      <Card>
+        <StyleImage src={sampleImg} alt={sampleImg} />
+        <StyleContent>
+          <h3>Things About Git and Github You Need to Know as Developer</h3>
+          <DateRead date={"Dec 7th, 2018"} time={2} />
+          <p>
+            In this article I’m going to present to you a way of handling your
+            API errors once and for all in a In this article I’m going to
+            present to you a way of handling your API errors once and for all in
+          </p>
+        </StyleContent>
+        <a href="#" />
+      </Card>
+      <Card>
+        <StyleImage src={sampleImg} alt={sampleImg} />
+        <StyleContent>
+          <h3>Things About Git and Github You Need to Know as Developer</h3>
+          <DateRead date={"Dec 7th, 2018"} time={18} />
+          <p>
+            In this article I’m going to present to you a way of handling your
+            API errors once and for all in a In this article I’m going to
+            present to you a way of handling your API errors once and for all in
+          </p>
+        </StyleContent>
+        <a href="#" />
+      </Card>
+      <Card>
+        <StyleImage src={sampleImg} alt={sampleImg} />
+        <StyleContent>
+          <h3>Things About Git and Github You Need to Know as Developer</h3>
+          <DateRead date={"Dec 7th, 2018"} time={18} />
+          <p>
+            In this article I’m going to present to you a way of handling your
+            API errors once and for all in a In this article I’m going to
+            present to you a way of handling your API errors once and for all in
+          </p>
+        </StyleContent>
+        <a href="#" />
+      </Card>
+      <Card>
+        <StyleImage src={sampleImg} alt={sampleImg} />
+        <StyleContent>
+          <h3>Things About Git and Github You Need to Know as Developer</h3>
+          <DateRead date={"Dec 7th, 2018"} time={18} />
+          <p>
+            In this article I’m going to present to you a way of handling your
+            API errors once and for all in a In this article I’m going to
+            present to you a way of handling your API errors once and for all in
+          </p>
+        </StyleContent>
+        <a href="#" />
+      </Card>
+      <Card>
+        <StyleImage src={sampleImg} alt={sampleImg} />
+        <StyleContent>
+          <h3>Things About Git and Github You Need to Know as Developer</h3>
+          <DateRead date={"Dec 7th, 2018"} time={18} />
+          <p>
+            In this article I’m going to present to you a way of handling your
+            API errors once and for all in a In this article I’m going to
+            present to you a way of handling your API errors once and for all in
+          </p>
+        </StyleContent>
+        <a href="#" />
+      </Card>
+      <Card>
+        <StyleImage src={sampleImg} alt={sampleImg} />
+        <StyleContent>
+          <h3>Things About Git and Github You Need to Know as Developer</h3>
+          <DateRead date={"Dec 7th, 2018"} time={18} />
+          <p>
+            In this article I’m going to present to you a way of handling your
+            API errors once and for all in a In this article I’m going to
+            present to you a way of handling your API errors once and for all in
+          </p>
+        </StyleContent>
+        <a href="#" />
+      </Card>
+    </StyleWrapper>
   );
 }
 
-export default Card;
+export default CardComponent;

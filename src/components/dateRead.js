@@ -21,7 +21,7 @@ const StyleDate = styled.div``;
 const StyleTime = styled.div``;
 
 const StyleIcon = styled.img`
-  margin-left: 3px;
+  margin-left: 4px;
   width: 12px;
 `;
 

@@ -39,11 +39,11 @@ const StyleContent = styled.div`
   }
   p {
     margin: 15px 0 0;
-    height: 35px;
+    height: 52px;
     overflow: hidden;
     font-size: 14px;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
   }
 `;
@@ -61,7 +61,12 @@ function List(props) {
           do you understand why do you need or why you are using these? Let’s
           dig a little deeper to understand have come across the terms Git and
           Github but do you understand why do you need or why you are using
-          these? Let’s dig a little deeper to understand…
+          these? Let’s dig a little deeper to understand.As a developer, you
+          might have come across the terms Git and Github but do you understand
+          why do you need or why you are using these? Let’s dig a little deeper
+          to understand have come across the terms Git and Github but do you
+          understand why do you need or why you are using these? Let’s dig a
+          little deeper to understand
         </p>
       </StyleContent>
       <a href="#" />
