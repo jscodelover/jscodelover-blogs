@@ -13,7 +13,7 @@ function BlogType(props) {
     case "3":
       return <Line {...props} />;
     default:
-      return <Card {...props} />;
+      return <List {...props} />;
   }
 }
 
