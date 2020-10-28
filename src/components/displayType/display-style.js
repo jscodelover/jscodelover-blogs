@@ -4,6 +4,7 @@ const StyleView = styled.ul`
   display: flex;
   margin-top: 100px;
   justify-content: flex-end;
+  margin-bottom: 70px;
   li {
     &:not(:last-of-type) {
       margin-right: 17px;

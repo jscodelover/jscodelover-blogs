@@ -51,7 +51,7 @@ const StyleContent = styled.div`
   }
   p {
     margin: 12px 0 0;
-    height: 30px;
+    max-height: 30px;
     overflow: hidden;
     font-size: 12px;
     display: -webkit-box;

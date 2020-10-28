@@ -15,6 +15,9 @@ const StyleList = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 80px;
+  @media (max-width: 768px) {
+    flex-direction: row-reverse;
+  }
   a {
     position: absolute;
     top: 0;
@@ -33,7 +36,10 @@ const StyleImage = styled.img`
   border-radius: 9px;
   margin-right: 39px;
   @media (max-width: 768px) {
-    display: none;
+    width: 100px;
+    height: 90px;
+    margin-left: 19px;
+    margin-right: 0;
   }
 `;
 
@@ -46,7 +52,17 @@ const StyleContent = styled.div`
     cursor: pointer;
 
     @media (max-width: 768px) {
-      font-size: var(--fz-xl);
+      font-size: 18px;
+      max-height: 42px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+    @media (max-width: 528px) {
+      font-size: 16px;
+      max-height: 60px;
+      -webkit-line-clamp: 3;
     }
   }
   div {
@@ -54,12 +70,19 @@ const StyleContent = styled.div`
   }
   p {
     margin: 15px 0 0;
-    height: 52px;
+    max-height: 52px;
     overflow: hidden;
     font-size: 14px;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    @media (max-width: 768px) {
+      max-height: 35px;
+      -webkit-line-clamp: 2;
+    }
+    @media (max-width: 528px) {
+      display: none;
+    }
   }
 `;
 
