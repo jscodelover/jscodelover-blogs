@@ -8,3 +8,6 @@ export { default as IconLogo } from "./logo";
 export { default as IconTwitter } from "./twitter";
 export { default as IconHamBurger } from "./hamBurger";
 export { default as IconCross } from "./cross";
+export { default as IconGrid } from "./grid";
+export { default as IconList1 } from "./list_1";
+export { default as IconList2 } from "./list_2";

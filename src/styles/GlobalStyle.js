@@ -67,12 +67,15 @@ const GlobalStyle = createGlobalStyle`
     background-color: transparent;
     border: none;
     cursor: pointer;
+    img,svg{
+      pointer-events: none;
+    }
   }
 
   a{
     color: inherit;
     text-decoration: none;
-    &:active, &:visited{
+    &:active, &:hover{
       color: inherit;
     }
   }

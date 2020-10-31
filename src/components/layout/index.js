@@ -1,6 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import { Header } from "@components";
+import { Location } from "@reach/router";
+import { Header, Footer } from "@components";
 import useScrollDirection from "@hooks/useScrollDirection";
 import { StyleContent } from "./layout-style.js";
 
@@ -24,19 +25,23 @@ function Layout(props) {
     handleScrollTop(window.pageYOffset < 50);
   }
 
-  const { children, handleTheme, theme } = props;
+  const { handleTheme, children } = props;
   return (
-    <>
-      <Header
-        handleTheme={handleTheme}
-        theme={theme}
-        scrollDir={scrollDir}
-        scrolledToTop={scrolledToTop}
-      />
-      <StyleContent>
-        <main>{children}</main>
-      </StyleContent>
-    </>
+    <Location>
+      {({ location }) => (
+        <>
+          <Header
+            handleTheme={handleTheme}
+            scrollDir={scrollDir}
+            scrolledToTop={scrolledToTop}
+          />
+          <StyleContent>
+            <main>{children}</main>
+            <Footer location={location} />
+          </StyleContent>
+        </>
+      )}
+    </Location>
   );
 }
 

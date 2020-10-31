@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import { Button } from "@components";
 
-const StyleWrapper = styled.section`
+const StyleWrapper = styled.div`
   margin: 50vh auto 0;
   transform: translateY(-50%);
   text-align: center;

@@ -6,6 +6,7 @@ const StyledButton = styled.button`
   color: ${({ theme }) => theme.text2};
   padding: 14px 25px;
   font-size: var(--fz-md);
+  font-weight: 500;
   &:hover {
     background-color: ${({ theme }) => theme.text2};
     color: ${({ theme }) => theme.body};

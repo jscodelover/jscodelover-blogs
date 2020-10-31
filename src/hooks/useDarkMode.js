@@ -8,6 +8,7 @@ function useDarkMode() {
   }, []);
 
   function toggleTheme() {
+    console.log("theme", theme);
     if (theme === "dark") {
       localStorage.setItem("theme", "light");
       setTheme("light");
