@@ -1,7 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { Location } from "@reach/router";
-import { Header, Footer } from "@components";
+import { Header, Footer, Social } from "@components";
 import useScrollDirection from "@hooks/useScrollDirection";
 import { StyleContent } from "./layout-style.js";
 
@@ -35,6 +35,7 @@ function Layout(props) {
             scrollDir={scrollDir}
             scrolledToTop={scrolledToTop}
           />
+          <Social />
           <StyleContent>
             <main>{children}</main>
             <Footer location={location} />

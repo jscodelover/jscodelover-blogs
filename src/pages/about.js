@@ -41,7 +41,7 @@ const StyledPlaceHolderImage = styled.div`
   }
 
   @media (max-width: 1300px) {
-    visibility: hidden;
+    display: none;
   }
 `;
 
