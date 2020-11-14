@@ -4,6 +4,7 @@ import { DateRead } from "@components";
 
 const StyleWrapper = styled.div`
   width: 75%;
+  margin: 0 auto;
   @media (max-width: 1198px) {
     width: 100%;
   }
@@ -46,6 +47,11 @@ const StyleLine = styled.div`
     left: 0;
     right: 0;
     z-index: 999;
+  }
+  &:hover {
+    h3 {
+      color: ${({ theme }) => theme.highlight};
+    }
   }
 `;
 

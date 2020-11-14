@@ -30,6 +30,7 @@ const StyleNav = styled.div`
     `};
 
   .link {
+    display: inline-block;
     font-weight: 500;
     font-size: clamp(var(--fz-sm), 4vw, var(--fz-md));
     color: ${({ theme }) => theme.text1};
@@ -51,6 +52,12 @@ const StyleLinks = styled.nav`
     display: flex;
     align-items: center;
     li {
+      .link {
+        transition: var(--transition);
+        &:hover {
+          transform: translateY(-3px);
+        }
+      }
       &:not(:last-child) {
         margin-right: 35px;
       }

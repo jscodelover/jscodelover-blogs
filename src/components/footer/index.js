@@ -1,9 +1,18 @@
 import * as React from "react";
 import PropTypes from "prop-types";
+import { ColorThemeContext } from "@context";
 import { Button } from "@components";
-import { StyleFooter, StyleCreatorName } from "./footer-style";
+import { Icon } from "@components/icons";
+import { socialMedia } from "@utils/socialmedia";
+import {
+  StyleFooter,
+  StyleCreatorName,
+  StyleSocial,
+  Media,
+} from "./footer-style";
 
 function Footer(props) {
+  const [theme] = React.useContext(ColorThemeContext);
   const {
     location: { pathname },
   } = props;
@@ -27,6 +36,15 @@ function Footer(props) {
           </Button>
         </StyleFooter>
         <StyleCreatorName>
+          <StyleSocial>
+            {socialMedia.map(({ name, url }) => (
+              <Media key={name}>
+                <a href={url} target="_blank">
+                  <Icon name={name} theme={theme} />
+                </a>
+              </Media>
+            ))}
+          </StyleSocial>
           <a
             href="https://github.com/jscodelover/jscodelover-blogs"
             target="_blank"

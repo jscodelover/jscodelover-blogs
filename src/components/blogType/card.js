@@ -28,6 +28,12 @@ const Card = styled.div`
     right: 0;
     z-index: 999;
   }
+  &:hover {
+    /* transform: rotateX(-4deg) rotateY(0deg) rotateZ(-2deg); */
+    h3 {
+      color: ${({ theme }) => theme.highlight};
+    }
+  }
 `;
 
 const StyleImage = styled.img`

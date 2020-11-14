@@ -26,6 +26,11 @@ const StyleList = styled.div`
     right: 0;
     z-index: 999;
   }
+  &:hover {
+    h3 {
+      color: ${({ theme }) => theme.highlight};
+    }
+  }
 `;
 
 const StyleImage = styled.img`

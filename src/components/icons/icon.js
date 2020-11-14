@@ -15,17 +15,17 @@ const Icon = ({ name, theme }) => {
     case "Theme":
       return <IconTheme theme={theme} />;
     case "Codepen":
-      return <IconCodepen />;
+      return <IconCodepen theme={theme} />;
     case "Behance":
-      return <IconBehance />;
+      return <IconBehance theme={theme} />;
     case "GitHub":
-      return <IconGitHub />;
+      return <IconGitHub theme={theme} />;
     case "Linkedin":
-      return <IconLinkedin />;
+      return <IconLinkedin theme={theme} />;
     case "Logo":
       return <IconLogo theme={theme} />;
     case "Twitter":
-      return <IconTwitter />;
+      return <IconTwitter theme={theme} />;
     default:
       return null;
   }

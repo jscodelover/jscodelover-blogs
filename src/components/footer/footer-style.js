@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Media } from "@components/social/social-style";
 
 const StyleFooter = styled.section`
   text-align: center;
@@ -29,4 +30,19 @@ const StyleCreatorName = styled.section`
   }
 `;
 
-export { StyleFooter, StyleCreatorName };
+const StyleSocial = styled.ul`
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
+  @media (max-width: 768px) {
+    visibility: visible;
+  }
+`;
+
+const MediaLink = styled(Media)`
+  &:not(:last-of-type) {
+    margin-right: 20px;
+  }
+`;
+
+export { StyleFooter, StyleCreatorName, StyleSocial, MediaLink as Media };
