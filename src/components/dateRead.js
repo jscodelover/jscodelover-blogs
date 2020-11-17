@@ -3,7 +3,9 @@ import styled from "styled-components";
 import lunch from "@images/lunch.svg";
 import coffee from "@images/coffee.svg";
 
-const StyleDateRate = styled.div`
+const StyleDateRate = styled.div.attrs(props => ({
+  className: props.className,
+}))`
   display: flex;
   align-items: center;
   font-size: var(--fz-xxs);
