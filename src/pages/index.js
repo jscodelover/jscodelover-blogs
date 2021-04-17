@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import { HeroSection, DisplayType, BlogType } from "@components";
 
 export default function Home() {
-  const [viewType, handleViewType] = useState("1");
+  const [viewType, handleViewType] = useState("2");
 
   return (
     <>

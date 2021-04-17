@@ -5,6 +5,7 @@ import sample from "@images/sample.jpeg";
 
 const StyledWrapper = styled.div`
   display: flex;
+  justify-content: space-between;
 `;
 
 const StyledBlog = styled.article`
@@ -83,6 +84,29 @@ const StyledContent = styled.section`
 const StyledIndex = styled.aside`
   padding: 150px 0;
   margin-left: 100px;
+  position: sticky;
+  top: -100px;
+  align-self: flex-start;
+  h2 {
+    font-size: var(--fz-lg);
+    font-weight: 400;
+    letter-spacing: 0.14rem;
+    color: ${({ theme }) => theme.highlight};
+    text-transform: uppercase;
+  }
+  ul {
+    li {
+      margin-top: 12px;
+      font-size: var(--fz-md);
+      &:hover {
+        color: ${({ theme }) => theme.highlight};
+        cursor: pointer;
+      }
+    }
+    ul {
+      margin-left: 12px;
+    }
+  }
   @media (max-width: 768px) {
     display: none;
   }
@@ -169,7 +193,16 @@ function Blog() {
         </StyledContent>
       </StyledBlog>
       <StyledIndex>
-        <p>On this page</p>
+        <h2>Table of Contents</h2>
+        <ul>
+          <li>Introduction</li>
+          <li>Adding our CSS variables</li>
+          <ul>
+            <li>Introduction</li>
+            <li>Adding our CSS variables</li>
+            <li>Adding our CSS variables</li>
+          </ul>
+        </ul>
       </StyledIndex>
     </StyledWrapper>
   );

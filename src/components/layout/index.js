@@ -35,7 +35,7 @@ function Layout(props) {
             scrollDir={scrollDir}
             scrolledToTop={scrolledToTop}
           />
-          <Social />
+          {["/"].includes(location.pathname) && <Social />}
           <StyleContent>
             <main>{children}</main>
             <Footer location={location} />

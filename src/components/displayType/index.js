@@ -3,7 +3,7 @@ import { StyleView } from "./display-style";
 import { IconGrid, IconList1, IconList2 } from "@components/icons";
 
 function DisplayType(props) {
-  const [viewType, handleViewType] = React.useState("1");
+  const [viewType, handleViewType] = React.useState("2");
 
   function handleClick(e) {
     const { type } = e.target.dataset;
